@@ -5,6 +5,7 @@ use sea_orm::prelude::DateTime;
 pub struct CreateMusicDto {
     pub img: String,
     pub title: String,
+    pub lyrics: Option<String>,
     pub author_id: Option<i32>,
     pub author_name: Option<String>,
     pub album_id: Option<i32>,
@@ -22,6 +23,7 @@ pub struct UpdateMusicDto {
     pub id: i32,
     pub img: String,
     pub title: String,
+    pub lyrics: Option<String>,
     pub author_id: Option<i32>,
     pub author_name: Option<String>,
     pub album_id: Option<i32>,
@@ -38,3 +40,4 @@ pub struct UpdateMusicDto {
     pub update_time: Option<DateTime>,
     pub update_id: Option<i32>,
 }
+

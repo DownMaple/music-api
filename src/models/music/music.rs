@@ -17,6 +17,7 @@ pub mod music {
         pub id: i32,
         pub img: String,
         pub title: String,
+        pub lyrics: Option<String>,
         pub author_id: Option<i32>,
         pub author_name: Option<String>,
         pub album_id: Option<i32>,
