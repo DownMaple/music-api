@@ -9,6 +9,6 @@ pub fn create_routes() -> Vec<Route> {
         list,
         save,
         update,
-        get_music_lyrics
+        get_music_lyrics,
     ]
 }

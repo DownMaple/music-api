@@ -1,4 +1,4 @@
-use rocket::{get, post, State};
+use rocket::{ get, post,  State};
 use rocket::serde::json::Json;
 use sea_orm::{DatabaseConnection, NotSet};
 use sea_orm::ActiveValue::Set;
@@ -60,6 +60,7 @@ pub async fn update(music_data: Json<Model>, db: &State<DatabaseConnection>) -> 
     }
 }
 
+// 解析歌词文件
 #[get("/lyrics?<id>")]
 pub async fn get_music_lyrics(id: i32, db: &State<DatabaseConnection>) -> ResType<()> {
     let music: Option<MusicModel> = music_service::get_music_by_id(&db, id).await;
